@@ -1,6 +1,8 @@
 # TBI Causal Effect Analysis
 
-This repository contains analysis of the **causal effect of surgical interventions (Craniotomy/Craniectomy)** on various discharge outcomes in patients with Traumatic Brain Injury (TBI) in the TBIMS Dataset.
+This repository contains analysis of the **causal effect of surgical interventions (Craniotomy/Craniectomy)** on various discharge outcomes in patients with Traumatic Brain Injury (TBI) in the TBIMS Dataset. 
+
+Dataset Link: https://www.tbindsc.org/
 
 We evaluate the **Average Treatment Effect (ATE)** and **Average Treatment Effect on the Treated (ATT)** using stratified estimation methods. We also perform t-tests to assess statistical differences between treated and control groups.
 
