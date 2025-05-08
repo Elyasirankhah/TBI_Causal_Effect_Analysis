@@ -1,44 +1,52 @@
 # TBI Causal Effect Analysis
 
-This repository contains analysis of the **causal effect of surgical interventions (Craniotomy/Craniectomy)** on various discharge outcomes in patients with Traumatic Brain Injury (TBI) in the TBIMS Dataset. 
+This repository contains an analysis of the **causal effect of surgical interventions (Craniotomy/Craniectomy)** on cognitive and functional outcomes at discharge in patients with Traumatic Brain Injury (TBI), based on the TBIMS dataset.
 
-Dataset Link: https://www.tbindsc.org/
+**Dataset Source:** [TBIMS National Data and Statistical Center](https://www.tbindsc.org/)
 
-We evaluate the **Average Treatment Effect (ATE)** and **Average Treatment Effect on the Treated (ATT)** using stratified estimation methods. We also perform t-tests to assess statistical differences between treated and control groups.
+We evaluate the **Average Treatment Effect (ATE)** and **Average Treatment Effect on the Treated (ATT)** using stratified estimation. We also compute **Propensity Score Matching (PSM)** effects for robustness and perform Welch’s t-tests for statistical significance.
+
+---
 
 ## 📊 Analysis Summary
 
-| Outcome        | ATE Estimate | ATT Estimate | T-Test (p-value) |
-|----------------|--------------|--------------|------------------|
-| FIMCompD       | -1.27        | -2.49        | 0.2522           |
-| FIMMemD        | -1.14        | -2.12        | 0.4637           |
-| FIMProbSlvD    | -1.21        | -2.41        | 0.3727           |
-| FIMExpressD    | -1.39        | -2.49        | 0.3008           |
-| FIMSocialD     | -1.11        | -2.26        | 0.2866           |
+| Outcome        | ATE Estimate | ATT Estimate | T-Test (p-value) | ATT via PSM |
+|----------------|--------------|--------------|------------------|-------------|
+| FIMCompD       | -1.27        | -2.49        | 0.2522           | -0.95       |
+| FIMMemD        | -1.14        | -2.12        | 0.4637           | -0.85       |
+| FIMProbSlvD    | -1.21        | -2.41        | 0.3727           | -0.91       |
+| FIMExpressD    | -1.39        | -2.49        | 0.3008           | -1.10       |
+| FIMSocialD     | -1.11        | -2.26        | 0.2866           | -0.79       |
 
-> **Note:** All effects are negative, suggesting that surgery may be associated with *lower* discharge scores, although none of the t-tests indicate statistical significance (p > 0.05).
+> **Note:** All estimates indicate negative effects, suggesting that surgery is associated with *lower* discharge scores. While directionally consistent across methods, no t-tests reached statistical significance (p > 0.05).
 
 ---
 
 ## 📁 Contents
 
-- `Final_Analysis.ipynb`: Full notebook with all data processing, stratification, ATE, ATT, and t-test computations.
-- `severity_control_processed.csv`: Cleaned dataset used for the analysis.
-  
+- `Final_Analysis.ipynb`: Full analysis notebook with preprocessing, group stratification, ATE, ATT, PSM, and validation tests.
+- `severity_control_processed.csv`: Cleaned dataset used for all computations.
+- Supporting figures and correlation plots for visualization.
+
+---
+
 ## 📚 Methods
 
-- Stratified groupings based on key confounders: `SexF`, `SCI`, `Hypertension`
-- ATT: Calculated using weights from treated group only (GCS < 8)
-- ATE: Computed over the full population (GCS ≤ 20)
-- T-test: Welch’s test (unequal variance) between treated and control outcomes
+- **Confounders:** Stratification and matching based on `SexF`, `SCI`, and `CC_Hypertension`
+- **ATE:** Computed for all patients using stratified group mean differences.
+- **ATT:** Estimated for severe TBI group (GCS ≤ 8), representing actual treatment group.
+- **PSM:** Logistic regression-based propensity scores; 1:1 nearest neighbor matching without replacement.
+- **Validation:** Welch’s t-test for treated vs. control groups within valid strata.
+
+---
 
 ## 📌 Requirements
 
 - Python ≥ 3.8
 - pandas
 - numpy
-- seaborn
 - matplotlib
+- seaborn
 - scipy
 
 Install dependencies using:
