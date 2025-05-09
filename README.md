@@ -26,7 +26,7 @@ We evaluate the **Average Treatment Effect (ATE)** and **Average Treatment Effec
 
 - `Final_Analysis.ipynb`: Full analysis notebook with preprocessing, group stratification, ATE, ATT, PSM, and validation tests.
 - `severity_control_processed.csv`: Cleaned dataset used for all computations.
-- 'preprocess_data': The script for getting severity_control_processed.csv
+- `preprocess_data`: The script for getting severity_control_processed.csv
 
 ---
 
