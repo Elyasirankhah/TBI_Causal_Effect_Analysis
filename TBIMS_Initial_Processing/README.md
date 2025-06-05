@@ -1,4 +1,4 @@
-TBIMS Dataset Initial Cleaning and Processing Summary
+TBIMS Dataset Initial Cleaning Summary
 ===========================================
 
 1. Initial Dataset Overview
