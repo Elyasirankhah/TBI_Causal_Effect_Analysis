@@ -1,5 +1,10 @@
 TBIMS Dataset Initial Cleaning Summary
 ===========================================
+This folder includes three key support files:
+- `TBIMS_Initial_Processing.ipynb` documents the complete Jupyter-based preprocessing pipeline.
+- `TBIMS_Special_Codes_Full.txt` lists and defines all special codes (e.g., 66, 8888) used in the raw data that explains their meanings and treatment during cleaning.
+- `TBIMS_Files_Review.xlsx` provides an overview of all available data/code files in the dataset.
+
 
 1. Initial Dataset Overview
 --------------------------
