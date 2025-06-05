@@ -1,0 +1,30 @@
+
+TBIMS Special Codes: Full Explanation with Context
+
+| Code          | Meaning (Generalized)                                                      | Context / Source in TBIMS Data Dictionary                                     |
+|---------------|----------------------------------------------------------------------------|-------------------------------------------------------------------------------|
+| 66            | Variable Did Not Exist                                                     | Early data collection gaps; variable not available at the time                |
+| 666           | Variable Did Not Exist (specific fields)                                   | e.g., Height, Weight (BMI), ZIP Codes, Address data                           |
+| 6666          | Variable Did Not Exist (extended format)                                   | Similar to 666 but for extended formats (e.g., 4-digit ZIP, demographic fields)|
+| 66666         | Variable Did Not Exist (5-digit format)                                    | Used in ZIP code fields, e.g., ZipDis, ZipF                                   |
+| 77            | Refused                                                                    | Participant refused to answer (e.g., marital status, language, demographics)  |
+| 777           | Refused                                                                    | Same as above, used in different fields (e.g., YearsInUSF)                    |
+| 7777          | Refused (rare)                                                              | Rare extended format, e.g., for large numeric fields                          |
+| 81            | Not Applicable                                                             | Skipped due to logic; e.g., not asked due to previous responses (screening skip) |
+| 82            | Not Applicable: No Data From Person with TBI, Environmental Limits         | Data missing because person with TBI couldn't answer; e.g., GAD, FIM, mobility|
+| 83            | Not Attempted Due to Medical/Safety Concerns                               | Tasks not performed due to risk; e.g., CARE/functional assessments            |
+| 84            | Did Not Meet Criteria (Left AMA, ICU return)                               | CARE assessments not performed; participant not eligible for data collection   |
+| 87            | Future Follow-Up Period                                                    | Data not yet due; used in longitudinal studies                                 |
+| 88            | Not Applicable                                                             | Data not collected; e.g., "CT Not Done," "ICP Not Monitored"                  |
+| 888           | Not Applicable                                                             | e.g., Language interview in English, participant born in US                    |
+| 8888          | Not Applicable (Amputations)                                               | e.g., Height/Weight fields if limb missing                                    |
+| 88888         | Not Applicable (Death, Zip Code, etc.)                                     | e.g., Death cause codes, Geo-coding not relevant                               |
+| 99            | Unknown                                                                    | No info provided; general fallback for missing data in any field              |
+| 999           | Unknown                                                                    | Same as above, used in different variables (e.g., Seizures, Data Collection)   |
+| 9999          | Unknown                                                                    | Similar; used in higher-order numeric fields (e.g., BMI, FIM)                 |
+| 99999         | Unknown (5-digit format)                                                   | Used in ZIP fields, e.g., ZipDis, ZipF                                        |
+| 999999        | Unknown (6-digit format)                                                   | e.g., Death cause codes, rare                                                |
+| 44444         | Expired: Cause Unknown                                                     | Used in death fields (e.g., DeathCause1) when participant died, cause unknown |
+| 04/04/4444    | Expired: Date Unknown                                                      | Date fields (e.g., DeathF) when death date is unknown                         |
+| 08/08/8888    | Not Applicable: Alive (for date fields)                                    | Date fields when participant is alive (e.g., DeathF)                          |
+| 09/09/9999    | Unknown (date fields)                                                      | Date fields when unknown (e.g., death date, birthdate)                        |
