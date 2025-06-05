@@ -27,6 +27,8 @@ TBIMS Dataset Initial Cleaning Summary
   * Form2 related (3 files)
   * TBIID related (3 files)
   * TBIIDMulti related (3 files)
+ 
+######### Hint: You can find out more info & explanations about these files in the 'TBIMS_Files_Review'
 
 3. Data Merging Operations
 -------------------------
