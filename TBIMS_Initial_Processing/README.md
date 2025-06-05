@@ -3,7 +3,7 @@ TBIMS Dataset Initial Cleaning Summary
 
 1. Initial Dataset Overview
 --------------------------
-- Total number of source files: 21 CSV files
+- Total number of source files: 20 files
 - Main data files processed:
   * Form1.csv (19,560 rows × 371 columns)
   * Form2.csv
