@@ -31,13 +31,21 @@ The source database is the U.S. Traumatic Brain Injury Model Systems National Da
 Full estimates, confidence intervals, and p-values are in Tables 1–3 of the paper. The paper treats the surgical result as compatible with confounding by indication: patients who need craniotomy are more severely injured. Effects that are statistically detectable can still be small for an individual patient.
 
 <p align="center">
-  <img src="assets/workflow.jpg" alt="Study pipeline: TBIMS cohort, outcome-adaptive LASSO, causal graph network, IPW and CEVAE, average treatment effects" width="100%">
+  <img src="assets/figure1.jpeg" alt="Figure 1. Study workflow from the TBIMS cohort through CGNN, OAL, IPW, and CEVAE." width="100%">
 </p>
+
+<p align="center"><b>Figure 1.</b> Study workflow. Adapted from Irankhah et al., <i>Frontiers in Neurology</i> 16:1685335 (2025), <a href="https://creativecommons.org/licenses/by/4.0/">CC BY</a>.</p>
 
 ## Methods in the paper
 
 1. **Outcome-adaptive LASSO** selects confounders for each outcome.
 2. **A causal graph neural network** checks the structure of those variables. The paper keeps a consensus set of 25 confounders.
+
+<p align="center">
+  <img src="assets/figure3.jpeg" alt="Figure 3. Causal graph neural network for the surgical question." width="100%">
+</p>
+
+<p align="center"><b>Figure 3.</b> Causal graph neural network for the surgical question. Adapted from Irankhah et al., <i>Frontiers in Neurology</i> 16:1685335 (2025), <a href="https://creativecommons.org/licenses/by/4.0/">CC BY</a>.</p>
 3. **Inverse probability weighting** estimates the average treatment effect from the measured confounders. Weights are trimmed at the 1st and 99th percentiles.
 4. **A causal-effect variational autoencoder** estimates the effect while allowing for latent confounding.
 
