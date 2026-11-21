@@ -1,0 +1,43 @@
+cff-version: 1.2.0
+title: "Machine learning-enhanced causal inference of surgical decisions and rehabilitation strategies in traumatic brain injury"
+message: "If you use this repository, cite the paper."
+type: software
+authors:
+  - family-names: Irankhah
+    given-names: Elyas
+  - family-names: Pagare
+    given-names: Madhavi
+  - family-names: Chetla
+    given-names: Lokesh
+  - family-names: Shen
+    given-names: Jiabin
+  - family-names: Ul Alam
+    given-names: Mohammad Arif
+  - family-names: Wolkowicz
+    given-names: Kelilah L.
+identifiers:
+  - type: doi
+    value: 10.3389/fneur.2025.1685335
+repository-code: "https://github.com/Elyasirankhah/TBI_Causal_Effect_Analysis"
+url: "https://doi.org/10.3389/fneur.2025.1685335"
+preferred-citation:
+  type: article
+  title: "Machine learning-enhanced causal inference of surgical decisions and rehabilitation strategies in traumatic brain injury"
+  journal: "Frontiers in Neurology"
+  volume: 16
+  pages: 1685335
+  year: 2025
+  doi: 10.3389/fneur.2025.1685335
+  authors:
+    - family-names: Irankhah
+      given-names: Elyas
+    - family-names: Pagare
+      given-names: Madhavi
+    - family-names: Chetla
+      given-names: Lokesh
+    - family-names: Shen
+      given-names: Jiabin
+    - family-names: Ul Alam
+      given-names: Mohammad Arif
+    - family-names: Wolkowicz
+      given-names: Kelilah L.
